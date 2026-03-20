@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,28 +8,33 @@
     <!-- Google Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
+
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-    <!-- Header / Navigation -->
+<body>
+    <!-- Efeito de cursor (Luz suave) -->
+    <div class="cursor-glow"></div>
+
+
     <header id="header" class="header">
         <div class="container nav-container">
             <a href="#home" class="logo">{ <span>Dev</span> }</a>
-            
+
             <nav class="navbar">
                 <ul class="nav-list">
                     <li><a href="#home" class="nav-link">Início</a></li>
                     <li><a href="#projects" class="nav-link">Projetos</a></li>
+                    <li><a href="#certificates" class="nav-link">Certificados</a></li>
                     <li><a href="#about" class="nav-link">Sobre Mim</a></li>
                     <li><a href="#contact" class="nav-link">Contato</a></li>
                 </ul>
             </nav>
-            
+
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -44,105 +50,185 @@
                 <div class="hero-content fade-in-up">
                     <p class="greeting">Olá, Meu Nome É</p>
                     <h1 class="name">Jabez Mendonça</h1>
-                    <p class="subtitle">Desenvolvedor Web apaixonado por tecnologia e pela criação de experiências digitais únicas.</p>
+                    <p class="subtitle">Desenvolvedor Web apaixonado por tecnologia e pela criação de experiências
+                        digitais únicas.</p>
                     <a href="#contact" class="btn btn-primary">Entre em Contato</a>
                 </div>
-                <!-- Placeholder para foto 1 -->
+                <!-- Foto do Desenvolvedor -->
                 <div class="hero-image fade-in-up" style="animation-delay: 0.2s;">
                     <div class="image-wrapper">
-                        <!-- Substituir src futuramente -->
-                        <img src="foto_perfil_1.jpg" alt="Foto do Desenvolvedor" class="profile-img">
+                        <div class="img-box">
+                            <img src="assets/imagens/foto1.png" alt="Foto do Desenvolvedor" class="profile-img">
+                        </div>
                         <div class="image-frame"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
+        <!-- projetos seçao -->
         <section id="projects" class="projects section bg-alt">
             <div class="container">
                 <div class="section-header fade-in-up">
                     <h2 class="section-title">Meus Projetos</h2>
                     <div class="title-line"></div>
                 </div>
-                
+
                 <div class="projects-grid">
-                    <!-- Project Card 1 -->
+                    <!-- Projeto  1 -->
                     <div class="project-card fade-in-up">
+                        <button class="btn-expand" aria-label="Ver Detalhes"><i
+                                class="fas fa-arrow-up-right-from-square"></i></button>
                         <div class="project-img">
-                            <img src="https://via.placeholder.com/600x400/111111/4caf7d?text=Projeto+1" alt="Projeto 1">
+                            <img src="assets/imagens/imagemvicenza.png" alt="Projeto 1">
                         </div>
                         <div class="project-info">
-                            <h3>E-commerce Minimalista</h3>
-                            <p>Uma plataforma de e-commerce completa com design focado na experiência do usuário e conversão.</p>
+                            <h3>Vicenza Empoli</h3>
+                            <p> Projeto escola website de uma empresa do setor automotivo,
+                                com foco em apresentar seus serviços e destacar os veículos disponíveis para venda.
+                                O projeto foi pensado para oferecer uma experiência visual impactante logo no primeiro
+                                contato,
+                                ]contando com uma tela inicial dinâmica que exibe um vídeo de destaque de um modelo
+                                Ferrari,
+                                transmitindo sofisticação e alto desempenho</p>
                             <div class="tech-tags">
-                                <span>HTML5</span>
-                                <span>CSS3</span>
+                                <span>HTML</span>
+                                <span>CSS</span>
                                 <span>JavaScript</span>
                             </div>
-                            <a href="#" class="btn btn-outline">Ver Projeto</a>
+                            <a href="" class="btn btn-outline">Ver Projeto</a>
                         </div>
                     </div>
 
-                    <!-- Project Card 2 -->
+                    <!-- Projeto  2 -->
                     <div class="project-card fade-in-up" style="animation-delay: 0.2s;">
-                        <div class="project-img">
-                            <img src="https://via.placeholder.com/600x400/111111/4caf7d?text=Projeto+2" alt="Projeto 2">
+                        <button class="btn-expand" aria-label="Ver Detalhes"><i
+                                class="fas fa-arrow-up-right-from-square"></i></button>
+                        <div class="project-img" style="height:320px;background-color:#1a1a2e;">
+                            <img src="assets/imagens/vilaBanks.png" alt="Projeto 2"
+                                style="object-fit:contain;object-position:top;">
                         </div>
                         <div class="project-info">
-                            <h3>Dashboard Administrativo</h3>
-                            <p>Painel de controle responsivo para gestão de dados com gráficos interativos e relatórios dinâmicos.</p>
+                            <h3>VilaBanks</h3>
+                            <p>projeto de um aplicativo bancário como projeto acadêmico utilizando FlutterFlow.
+                                O sistema conta com tela de login e, após o acesso, apresenta uma interface
+                                simples e intuitiva com as principais funcionalidades: transferência e Pix.
+                                O projeto foi focado em usabilidade e organização da navegação, aplicando
+                                conceitos de design de interfaces e desenvolvimento de aplicações móvei.</p>
                             <div class="tech-tags">
-                                <span>JavaScript</span>
-                                <span>Chart.js</span>
-                                <span>CSS Grid</span>
+                                <span>FlutterFlow</span>
+                                <span>Firebase</span>
+                                <span>Design de Interfaces</span>
                             </div>
-                            <a href="#" class="btn btn-outline">Ver Projeto</a>
+                            <a href="https://trabalho-site-tv5uy0.flutterflow.app" target="_blank"
+                                class="btn btn-outline">Ver Projeto</a>
                         </div>
                     </div>
 
-                    <!-- Project Card 3 -->
+                    <!-- Projeto 3 -->
                     <div class="project-card fade-in-up" style="animation-delay: 0.4s;">
+                        <button class="btn-expand" aria-label="Ver Detalhes"><i
+                                class="fas fa-arrow-up-right-from-square"></i></button>
                         <div class="project-img">
-                            <img src="https://via.placeholder.com/600x400/111111/4caf7d?text=Projeto+3" alt="Projeto 3">
+                            <img src="assets/imagens/imagemlumina.png" alt="Projeto 3">
                         </div>
                         <div class="project-info">
                             <h3>App de Produtividade</h3>
-                            <p>Aplicação web para gerenciamento de tarefas e tempo, focada em simplicidade e eficiência.</p>
+                            <p>Aplicação web para gerenciamento de tarefas e tempo, focada em simplicidade e eficiência.
+                                Site institucional para empresa de energia solar fotovoltaica no Ceará — cliente real.
+                                Desenvolvido
+                                com slider horizontal fixado por GSAP ScrollTrigger, vídeo hero otimizado com poster,
+                                mapa lazy do Google Maps,
+                                animações de contadores, preloader customizado, WhatsApp flutuante e SEO completo.
+
+                            </p>
                             <div class="tech-tags">
-                                <span>React</span>
-                                <span>Node.js</span>
-                                <span>MongoDB</span>
+                                <span>HTML</span>
+                                <span>JavaScript</span>
+                                <span>CSS</span>
                             </div>
-                            <a href="#" class="btn btn-outline">Ver Projeto</a>
+                            <a href="https://tuliovitor.github.io/lumina-solar" class="btn btn-outline">Ver Projeto</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- About Me Section -->
-        <section id="about" class="about section">
-            <div class="container about-container">
-                <!-- Placeholder para foto 2 -->
-                <div class="about-image fade-in-up">
-                    <div class="image-wrapper">
-                        <!-- Substituir src futuramente -->
-                        <img src="foto_perfil_2.jpg" alt="Foto do Desenvolvedor (Trabalhando)" class="profile-img shape-img">
-                        <div class="image-frame"></div>
+        <!-- certificado seçao-->
+        <section id="certificates" class="certificates section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2 class="section-title">Certificados</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <div class="certificates-grid">
+                    <!-- Certificado 1 -->
+                    <div class="certificate-card fade-in-up">
+                        <button class="btn-expand" aria-label="Ver Detalhes"><i
+                                class="fas fa-arrow-up-right-from-square"></i></button>
+                        <div class="cert-img-wrapper">
+                            <img src="assets/imagens/certificadocomunic.png" alt="Certificado 1" class="cert-img">
+                        </div>
+                        <div class="cert-info">
+                            <h3>Entendendo Comunicação Cliente x Servidor – DIO</h3>
+                            <p><strong>Curso focado nos conceitos fundamentais da comunicação entre cliente e servidor,
+                                    abordando como aplicações web realizam requisições, respostas e troca de dados na
+                                    internet</strong>
+                        </div>
+                    </div>
+
+                    <!-- Certificado 2 -->
+                    <div class="certificate-card fade-in-up" style="animation-delay: 0.1s;">
+                        <button class="btn-expand" aria-label="Ver Detalhes"><i
+                                class="fas fa-arrow-up-right-from-square"></i></button>
+                        <div class="cert-img-wrapper">
+                            <img src="assets/imagens/certificadointrd.png" alt="Certificado 2" class="cert-img">
+                        </div>
+                        <div class="cert-info">
+                            <h3>Introdução ao Desenvolvimento Front-end com Ri Happy – DIO</h3>
+                            <p><strong>Curso voltado aos primeiros passos no desenvolvimento front-end,
+                                    com foco na criação de interfaces web utilizando conceitos básicos de HTML,
+                                    CSS e JavaScript</strong>>
+                        </div>
+                    </div>
+
+                    <!-- Certificado 3 -->
+                    <div class="certificate-card fade-in-up" style="animation-delay: 0.2s;">
+                        <button class="btn-expand" aria-label="Ver Detalhes"><i
+                                class="fas fa-arrow-up-right-from-square"></i></button>
+                        <div class="cert-img-wrapper">
+                            <img src="assets/imagens/certificadohuawei.png" alt="Certificado 3" class="cert-img">
+                        </div>
+                        <div class="cert-info">
+                            <h3>Fundamentos de Tecnologia – Huawei</h3>
+                            <p><strong>Curso introdutório que apresenta os principais conceitos da área de tecnologia,
+                                    incluindo noções de infraestrutura, redes e inovação digital, fortalecendo a base
+                                    para
+                                    atuação no setor.</strong>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="about-content fade-in-up" style="animation-delay: 0.2s;">
+            </div>
+        </section>
+
+        <!-- sobre mim -->
+        <section id="about" class="about section bg-alt">
+            <div class="container about-container-no-img">
+                <div class="about-content fade-in-up">
                     <h2 class="section-title">Sobre Mim</h2>
-                    <div class="title-line left-align"></div>
+                    <div class="title-line"></div>
                     <p class="about-text">
-                        Sou um desenvolvedor web júnior com grande entusiasmo pela tecnologia e pelo universo do desenvolvimento front-end. Tenho me dedicado a aprender e aprimorar minhas habilidades na criação de interfaces modernas, funcionais e acessíveis.
+                        Sou um desenvolvedor web júnior com grande entusiasmo pela tecnologia e pelo universo do
+                        desenvolvimento front-end. Tenho me dedicado a aprender e aprimorar minhas habilidades na
+                        criação de interfaces modernas, funcionais e acessíveis.
                     </p>
                     <p class="about-text">
-                        Acredito no poder do código para transformar ideias em experiências reais, e busco constantemente crescer como profissional. Cada projeto é uma nova oportunidade de aprender, inovar e entregar soluções que façam a diferença.
+                        Acredito no poder do código para transformar ideias em experiências reais, e busco
+                        constantemente crescer como profissional. Cada projeto é uma nova oportunidade de aprender,
+                        inovar e entregar soluções que façam a diferença.
                     </p>
-                    
+
                     <h3 class="skills-title">Principais Competências</h3>
                     <div class="skills-container">
                         <div class="skill-badge"><i class="fab fa-html5"></i> HTML5</div>
@@ -155,33 +241,59 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- contatos -->
         <section id="contact" class="contact section border-top">
             <div class="container contact-container">
                 <div class="contact-content fade-in-up">
                     <h2 class="contact-heading">Vamos trabalhar juntos no seu próximo projeto?</h2>
-                    <p class="contact-subtext">Estou disponível para novos projetos e colaborações. Entre em contato!</p>
-                    
+                    <p class="contact-subtext">Estou disponível para novos projetos e colaborações. Entre em contato!
+                    </p>
+
                     <div class="social-links">
-                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/jabez-mendonca" class="social-icon"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/jabez01jz" class="social-icon" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/jabez_oliveira7?igsh=MXdjbG43Z3ZjMnRtMQ=="
+                            class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
-                    
-                    <a href="mailto:seuemail@exemplo.com" class="btn btn-primary mt-4">Enviar Email</a>
+
+                    <div class="contact-actions fade-in-up" style="animation-delay: 0.2s;">
+                        <a href="mailto:jabezmendonca6@gmail.com" class="btn btn-primary">Enviar Email <i
+                                class="fas fa-envelope ml-2"></i></a>
+                        <a href="assets/curriculo.pdf" download class="btn btn-outline"
+                            style="border-color: var(--accent); color: var(--accent); background-color: rgba(76, 175, 125, 0.05);">
+                            <i class="fas fa-download mr-2"></i> Baixar Currículo
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Details Modal -->
+    <div class="modal-overlay" id="details-modal">
+        <div class="modal-container">
+            <button class="modal-close" id="close-modal" aria-label="Fechar"><i class="fas fa-times"></i></button>
+            <div class="modal-img-container">
+                <img id="modal-image" src="" alt="Imagem Destacada">
+            </div>
+            <div class="modal-body">
+                <h3 id="modal-title">Título</h3>
+                <div id="modal-desc" class="modal-desc-text"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-container">
-            <p>&copy; 2025 [Nome do Desenvolvedor]. Todos os direitos reservados.</p>
+            <p>&copy; 2025 Jabez mendonça de oliveira. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <!-- Custom Script -->
+    <!--  Script -->
     <script src="script.js"></script>
 </body>
+
 </html>
