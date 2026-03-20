@@ -1012,6 +1012,9 @@ img {
         max-height: 90vh;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
+        /* Stack image and body vertically so nothing gets cut off */
+        display: flex;
+        flex-direction: column;
     }
 
     /* Keep the × button always visible while the user scrolls */
@@ -1022,6 +1025,15 @@ img {
         background-color: rgba(20, 20, 20, 0.9);
         border-radius: 0 0 0 8px;
         padding: 6px 10px;
+        /* Prevent the button from shrinking inside the flex container */
+        flex-shrink: 0;
+        align-self: flex-end;
+    }
+
+    .modal-img-container {
+        /* Cap image height on mobile so body text is always reachable */
+        max-height: 220px;
+        flex-shrink: 0;
     }
 
     .modal-body {
