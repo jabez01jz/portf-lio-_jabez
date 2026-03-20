@@ -763,54 +763,54 @@ img {
    ========================================================================== */
 .modal-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
-    z-index: 10000;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 9999;
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    backdrop-filter: blur(5px);
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    padding: 1rem;
 }
 
 .modal-overlay.active {
     opacity: 1;
-    visibility: visible;
+    pointer-events: all;
 }
 
 .modal-container {
-    background-color: var(--bg-card);
-    width: 90%;
-    max-width: 600px;
+    background: #1a1a1a;
     border-radius: 12px;
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
     position: relative;
-    overflow: hidden;
-    border: 1px solid var(--border-color);
-    transform: scale(0.95);
-    transition: transform 0.3s ease;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-}
-
-.modal-overlay.active .modal-container {
-    transform: scale(1);
+    display: flex;
+    flex-direction: column;
 }
 
 .modal-close {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: transparent;
+    position: sticky;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+    background: rgba(26,26,26,0.95);
     border: none;
-    color: var(--text-main);
-    font-size: 1.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
     cursor: pointer;
-    z-index: 11;
-    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: 0.75rem;
+    margin-top: 0.75rem;
 }
 
 .modal-close:hover {
@@ -819,39 +819,35 @@ img {
 
 .modal-img-container {
     width: 100%;
-    max-height: 450px;
-    overflow: hidden;
-    background-color: #1a1a1a;
+    background: #1a1a2e;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 200px;
 }
 
 .modal-img-container img {
-    width: auto;
-    max-width: 100%;
-    max-height: 450px;
-    height: auto;
+    width: 100%;
+    max-height: 400px;
     object-fit: contain;
-    object-position: center;
     display: block;
-    margin: 0 auto;
 }
 
 .modal-body {
-    padding: 2rem;
+    padding: 1.25rem;
 }
 
 .modal-body h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.3rem;
     color: var(--accent);
+    margin-bottom: 0.75rem;
 }
 
 .modal-desc-text {
     color: var(--text-muted);
     font-size: 0.95rem;
-    line-height: 1.6;
+    line-height: 1.7;
+    padding-bottom: 1rem;
 }
 
 /* ==========================================================================
@@ -1003,40 +999,3 @@ img {
     }
 }
 
-/* ==========================================================================
-   Modal — Mobile Fixes
-   ========================================================================== */
-@media screen and (max-width: 768px) {
-    .modal-container {
-        position: relative;
-        max-height: 90vh;
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
-        /* Stack image and body vertically so nothing gets cut off */
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* Keep the × button always visible while the user scrolls */
-    .modal-close {
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        background-color: rgba(20, 20, 20, 0.9);
-        border-radius: 0 0 0 8px;
-        padding: 6px 10px;
-        /* Prevent the button from shrinking inside the flex container */
-        flex-shrink: 0;
-        align-self: flex-end;
-    }
-
-    .modal-img-container {
-        /* Cap image height on mobile so body text is always reachable */
-        max-height: 220px;
-        flex-shrink: 0;
-    }
-
-    .modal-body {
-        padding: 1rem;
-    }
-}
